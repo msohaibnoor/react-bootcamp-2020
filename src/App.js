@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <h1>Helloo hooks</h1>
+      <h1>Helloo hooks from Context Api</h1>
     </div>
   );
 }
