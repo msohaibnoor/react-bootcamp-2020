@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.label-p {
+  text-align: left;
+  line-height: 23px;
+  width: 100%;
+  height: 100%;
+}
+.GTSelectbox-container {
+  color: #fff;
+}
+.gth2 {
+  color: red;
+  width: 335px;
+  height: 60px;
+  background-color: coral;
+}
+
+.select-box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 335px;
+  margin: 100px;
+}
+.selected1 {
+  position: relative;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #004843;
+  font-size: 18px;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  order: 0;
+  padding-left: 24px;
+  border-bottom: 1px solid lightgray;
+}
+.selected1::after {
+  content: "";
+  background: url("../../assets/down-arrow.svg");
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  top: 5;
+  right: 20px;
+  transition: all 0.1s ease;
+}
+.select-box .options-container.active + .selected1::after {
+  background: url("../../assets/down-arrow-purple.svg");
+}
+.selected1 .selected1-p {
+  position: absolute;
+}
+.selected1-span {
+  position: absolute;
+  transition: all 0.3s ease;
+}
+.span-floating {
+  transition: all 0.3s ease;
+  font-size: 12px;
+  color: #b5b2ba;
+  top: 2px;
+  left: 18px;
+}
+.selected1 .down-arrow {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  padding-right: 20px;
+}
+
+.select-box .options-container {
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #28252e;
+  max-height: 0;
+  width: 100%;
+  transition: all 0.3s;
+  overflow: hidden;
+  opacity: 0;
+  order: 1;
+  z-index: 100;
+}
+.select-box .options-container.active {
+  max-height: 162px;
+  opacity: 1;
+  padding: 6px 0px;
+}
+.select-box .options-container.active ~ .selected1 {
+  box-sizing: border-box;
+  border-bottom: 3px solid #5501bc;
+}
+.select-box .option,
+.selected1 {
+  cursor: pointer;
+}
+.select-box .option {
+  box-sizing: border-box;
+  height: 50px;
+  width: 325px;
+  padding: 12px 12px;
+  margin: 0px auto;
+  position: relative;
+}
+
+.options-container label:hover {
+  font-weight: normal;
+  cursor: pointer;
+}
+.options-container .option .radio {
+  display: none;
+}
+
+.selectbox-label {
+  width: 100%;
+  height: 100%;
+  /* position: relative; */
+  /* color: red; */
+}
+.selectbox-label input {
+  display: none;
+}
+
+.radio-circle {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  /* background-color: black; */
+  border: 1px solid grey;
+  top: 15px;
+  right: 4%;
+}
+.radio-circle::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #0c4843;
+  display: none;
+}
+.radio-circle::after.ON {
+  display: block;
+}
+
+/* .radio:checked .option {
+  background-color: #ebfcf9;
+} */
+
+.options-container .option input:checked ~ .radio-circle:after {
+  display: block;
+}
+input:checked {
+  background-color: #ebfcf9;
+}
+.turq-bg {
+  background-color: #ebfcf9;
+}
